@@ -1,0 +1,12 @@
+# Compiled Java output
+bin/
+*.class
+
+# Dependencies
+lib/
+
+# IDE
+.vscode/
+
+# macOS
+.DS_Store
