@@ -1,10 +1,12 @@
 # ChromaFuse
 
-Real-time color detection system that fuses vision-computed cursor corrections with hardware mouse input at the USB HID level — bypassing OS-layer event injection entirely.
+Real-time color detection system that fuses vision-computed cursor corrections with hardware mouse input at the USB HID level.
 
 ## Why I built this
 
-I wanted to explore hardware/software co-design at the input layer: can a microcontroller intercept raw USB mouse data, augment it with computer vision output, and re-emit a single clean HID stream — all before the OS processes anything? The project became a full sensor-to-actuator pipeline spanning Java computer vision, serial communication, and embedded USB HID on an AVR microcontroller.
+I wanted to explore hardware/software co-design at the input layer: can a microcontroller intercept raw USB mouse data, augment it with computer vision output, and re-emit a single clean HID stream — all before the OS processes anything? The project became a full sensor-to-actuator pipeline spanning Java computer vision, serial communication, and embedded USB HID on an AVR microcontroller. 
+
+The same architecture applies to robotics, accessibility tools, or any system where a model has to react to visual input within a frame deadline.
 
 ## Tech Stack
 
@@ -25,10 +27,6 @@ I wanted to explore hardware/software co-design at the input layer: can a microc
 - **Transmits** compact 3-byte delta packets over serial to minimize Java-to-Arduino latency
 - **Exposes** tunable deadzone, sensitivity, and color thresholds without recompiling
 
-## Screenshots / Demo
-
-> Add a GIF or screenshot here showing the overlay in action.
-> Suggested: `assets/demo.gif` — record with OBS or ShareX, crop to the overlay window.
 
 ## Getting Started
 
