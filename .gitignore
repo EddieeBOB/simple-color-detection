@@ -5,8 +5,14 @@ bin/
 # Dependencies
 lib/
 
+# Docs
+docs/
+
 # IDE
 .vscode/
+
+# ESP32-CAM firmware (external PlatformIO project, not part of the Java app)
+esp32cam-rtsp/
 
 # macOS
 .DS_Store
