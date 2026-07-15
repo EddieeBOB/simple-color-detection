@@ -1,4 +1,4 @@
-# Physical Color Sorter
+# TomatoVision
 
 A Java Swing application that watches a live ESP32-CAM video feed and classifies
 whatever object is sitting in a center region of the frame as **good** (red)
