@@ -21,7 +21,7 @@ or **bad** (not red), showing the verdict live over the video.
 
 - Java 11+ (Swing/AWT for the UI, `javax.imageio` for JPEG decoding,
   `java.net.HttpURLConnection` for the MJPEG connection)
-- No third-party **runtime** dependencies, no build tool — plain `javac`/`java`.
+- No third-party **runtime** dependencies, no build tool - plain `javac`/`java`.
   Tests use JUnit 5 via a single console-standalone jar in `lib/` (test-only)
 - All classes live in the default package, compiled straight to `bin/`
 
@@ -36,12 +36,12 @@ This opens a window titled "Color Sorter" with **Start** and **Stop** buttons.
 Click **Start** to connect to the camera stream; once frames arrive, the ROI
 box and live verdict appear. Click **Stop** to disconnect. If the camera is
 unreachable, the panel shows "Connecting…" and the console logs reconnect
-attempts — that's expected, not a crash.
+attempts - that's expected, not a crash.
 
 ## How to run the tests
 
 The tests use **JUnit 5 (Jupiter)** run through the JUnit Platform Console
-Standalone launcher — a single jar, no Maven/Gradle needed. It lives in `lib/`,
+Standalone launcher - a single jar, no Maven/Gradle needed. It lives in `lib/`,
 which is gitignored, so fetch it once if you don't have it:
 
 ```bash
@@ -59,7 +59,7 @@ java -jar "$JUNIT" execute --class-path bin --scan-class-path
 ```
 
 > JUnit **5** (Jupiter 5.14) is used because it runs on Java 11. JUnit **6**
-> requires Java 17+; once you're on a newer JDK, bump the jar to the `6.x` line —
+> requires Java 17+; once you're on a newer JDK, bump the jar to the `6.x` line -
 > the `@Test` / `Assertions` API is identical.
 
 ## ESP32-CAM setup
@@ -72,9 +72,9 @@ currently pointed at:
 http://192.168.1.212/stream
 ```
 
-(hardcoded as `STREAM_URL` in `src/SorterAppGUI.java` — update it if your
+(hardcoded as `STREAM_URL` in `src/SorterAppGUI.java` - update it if your
 camera has a different address). The stream is a single-connection MJPEG
-feed, so only **one** viewer can be connected at a time — if you have the
+feed, so only **one** viewer can be connected at a time - if you have the
 stream open in a browser or another tool, disconnect it before clicking
 **Start** in the app.
 
